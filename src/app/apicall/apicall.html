@@ -1,0 +1,17 @@
+<button (click)="btnClick()" class="border rounded-lg p-3 m-3 shadow-md hover:bg-gray-200">Load</button>
+<div class="flex justify-between border rounded-xl p-4">
+    <h1>User ID</h1>
+    <h1>Name</h1>
+    <h1>Age</h1>
+    <h1>Phone Number</h1>
+</div>
+@if (btnClicked) {
+  @for (item of userDetails; track item) {
+    <div class="flex justify-between border rounded-xl p-4">
+      <p>{{item.id}}</p>
+      <p>{{item.firstName}}</p>
+      <p>{{item.age}}</p>
+      <p>{{item.phone}}</p>
+    </div>
+  }
+}
